@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 import os
 import web
-#import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET
 import numbers
 
-#tree = ET.parse('user_data.xml')
-#root = tree.getroot()
+tree = ET.parse('user_data.xml')
+root = tree.getroot()
 
 urls = (
 	'/users', 'list_users',
