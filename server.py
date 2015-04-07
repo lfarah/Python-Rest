@@ -11,7 +11,7 @@ urls = (
 	'/users', 'list_users',
 	'/potato/(.*)', 'get_user',
 	'/write', 'write_users',
-	'/', 'greetings'
+	'/', 'greetings',
 	'/getXml', 'get_xml'
 
 
@@ -22,7 +22,7 @@ app = web.application(urls, globals())
 class get_xml:
 	def GET(self):
 		return "Welcome!"
-		
+
 class greetings:
 	def GET(self):
 		return root
