@@ -27,7 +27,7 @@ class get_xml:
 	def GET(self):
 		answer = ""
 		for node in root:
-			answer += node
+			answer += str(node)
 		return answer
 
 
