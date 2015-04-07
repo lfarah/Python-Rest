@@ -23,7 +23,7 @@ class write_users:
 		child = xml.Element("NewNode")
 		xmlRoot.append(child)
 		tree.write("user_data.xml")
-
+		return "wrote new line"
 class list_users:        
 	def GET(self):
 		output = 'users:[';
