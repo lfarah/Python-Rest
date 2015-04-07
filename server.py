@@ -33,7 +33,7 @@ class get_xml:
 
 class write_users:
 	def GET(self):
-		doc = ET.SubElement(root, "doc")
+		doc = ET.SubElement(root, "user")
 		ET.SubElement(doc, "field1", name="blah").text = "some value1"
 
 		tree = ET.ElementTree(root)
