@@ -34,8 +34,8 @@ class get_xml:
 class write_users:
 	def GET(self):
 		doc = ET.SubElement(root, "user")
-		co=ET.SubElement(doc, 'county', name='Socorro')
-	 	ppl=etree.SubElement(co, 'ppl', name='Luis Lopez')
+		co  = ET.SubElement(doc, 'county', name='Socorro')
+	 	ppl = ET.SubElement(co, 'ppl', name='Luis Lopez')
 		tree = ET.ElementTree(root)
 		root.append(doc)
 		tree.write("user_data.xml")
