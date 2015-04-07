@@ -9,21 +9,27 @@ root = tree.getroot()
 
 urls = (
 	'/users', 'list_users',
-	'/(.*)', 'get_user'
+	'/(.*)', 'get_user',
 	'/write', 'write_users',
+	'/', 'greetings'
+
 
 )
 
 app = web.application(urls, globals())
 
+class greetings:
+	def GET(self):
+		return "Welcome!"
+
 class write_users:
 	def GET(self):
-		tree = xml.parse("user_data.xml")
-		xmlRoot = tree.getroot()
+		
 		child = xml.Element("NewNode")
-		xmlRoot.append(child)
+		root.append(child)
 		tree.write("user_data.xml")
 		return "wrote new line"
+
 class list_users:        
 	def GET(self):
 		output = 'users:[';
