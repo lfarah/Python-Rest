@@ -27,8 +27,8 @@ class get_xml:
 	def GET(self):
 		answer = ""
 		for node in root:
-    		answer += node
-    	return answer
+			answer += node
+		return answer
 
 
 class write_users:
