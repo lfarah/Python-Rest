@@ -9,7 +9,7 @@ root = tree.getroot()
 
 urls = (
 	'/users', 'list_users',
-	'/(.*)', 'get_user',
+	'/potato/(.*)', 'get_user',
 	'/write', 'write_users',
 	'/', 'greetings'
 
