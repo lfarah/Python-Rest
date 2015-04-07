@@ -11,8 +11,8 @@ urls = (
 	'/users', 'list_users',
 	'/potato/(.*)', 'get_user',
 	'/write', 'write_users',
-	'/', 'greetings',
-	'/getXml', 'get_xml'
+	'/getXml', 'get_xml',
+	'/', 'greetings'
 
 
 )
@@ -25,7 +25,7 @@ class get_xml:
 
 class greetings:
 	def GET(self):
-		return root
+		return type(root)
 
 class write_users:
 	def GET(self):
