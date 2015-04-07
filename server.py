@@ -10,9 +10,19 @@ root = tree.getroot()
 urls = (
 	'/users', 'list_users',
 	'/(.*)', 'get_user'
+	'/write', 'write_users',
+
 )
 
 app = web.application(urls, globals())
+
+class write_users:
+	def WRITE(self):
+		tree = xml.parse("user_data.xml")
+		xmlRoot = tree.getroot()
+		child = xml.Element("NewNode")
+		xmlRoot.append(child)
+		tree.write("user_data.xml")
 
 class list_users:        
 	def GET(self):
