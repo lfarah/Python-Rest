@@ -12,15 +12,20 @@ urls = (
 	'/potato/(.*)', 'get_user',
 	'/write', 'write_users',
 	'/', 'greetings'
+	'/getXml', 'get_xml'
 
 
 )
 
 app = web.application(urls, globals())
 
-class greetings:
+class get_xml:
 	def GET(self):
 		return "Welcome!"
+		
+class greetings:
+	def GET(self):
+		return root
 
 class write_users:
 	def GET(self):
