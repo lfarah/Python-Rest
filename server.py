@@ -17,7 +17,7 @@ urls = (
 app = web.application(urls, globals())
 
 class write_users:
-	def WRITE(self):
+	def GET(self):
 		tree = xml.parse("user_data.xml")
 		xmlRoot = tree.getroot()
 		child = xml.Element("NewNode")
