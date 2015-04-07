@@ -37,6 +37,8 @@ class write_users:
 		co  = ET.SubElement(doc, 'county', name='Socorro')
 	 	ppl = ET.SubElement(co, 'ppl', name='Luis Lopez')
 		tree = ET.ElementTree(root)
+		doc.append(co)
+		doc.append(ppl)
 		root.append(doc)
 		tree.write("user_data.xml")
 		return "wrote new line"
