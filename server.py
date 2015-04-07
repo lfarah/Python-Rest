@@ -34,9 +34,7 @@ class get_xml:
 class write_users:
 	def GET(self):
 		doc = ET.SubElement(root, "doc")
-		ET.SubElement(doc, "field1", age=10).text = "some value1"
 		ET.SubElement(doc, "field1", name="blah").text = "some value1"
-		ET.SubElement(doc, "field1", id= 20).text = "some value1"
 
 		tree = ET.ElementTree(root)
 		root.append(doc)
