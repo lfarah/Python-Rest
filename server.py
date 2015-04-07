@@ -24,9 +24,11 @@ class greetings:
 
 class write_users:
 	def GET(self):
-		
-		child = xml.Element("NewNode")
-		root.append(child)
+		doc = ET.SubElement(root, "doc")
+		ET.SubElement(doc, "field1", name="blah").text = "some value1"
+
+		tree = ET.ElementTree(root)
+		root.append(doc)
 		tree.write("user_data.xml")
 		return "wrote new line"
 
