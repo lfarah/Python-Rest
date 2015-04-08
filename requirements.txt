@@ -18,3 +18,4 @@ web.py==0.37
 wsgiref==0.1.2
 xattr==0.6.4
 zope.interface==4.1.1
+Flask==0.10.1
