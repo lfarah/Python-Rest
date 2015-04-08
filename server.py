@@ -18,7 +18,7 @@ def api_hello():
 
 @app.route("/")
 def welcome():
-	return "\n" + "Welcome to the website. Possible method: http://127.0.0.1:5000/hello?name=Lucas&age=30"
+	return "Welcome to the website. Possible method: http://127.0.0.1:5000/hello?name=Lucas&age=30"
 
 @app.route("/save")
 def wc():
