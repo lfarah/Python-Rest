@@ -62,14 +62,14 @@ def addNew():
 	arr = json.load(inFiled)
 	inFiled.close()
 
-	my_dict2 = {                   
-  'Name':      'KURIO',
-  'Location':  u'Kilpisj\u00E4rvi',
-  'Longitude': 20.76,
-  'Latitude':  69.07
+	dct = {                   
+  'Name':      request.args['name'],
+  'Location':  request.args['location'],
+  'Longitude': request.args['longitude'],
+  'Latitude':  request.args['latitude']
 	}
 
-	arr.append(my_dict2)
+	arr.append(dct)
 # Load the contents from the file, which creates a new array
 
 	
